@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              leftbg: "#",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black">
+    <div
+      class="contailer my-8 mx-36 px-24 py-8 bg-gradient-to-r from-[#037DF5] to-[#0FEEBF]"
+    >
+      <div class="grid grid-cols-2 items-center shadow-lg shadow-slate-700">
+        <div class="bg-white py-16 px-10 rounded-md text-center">
+          <p class="text-red-800 capitalize text-lg italic mb-3">
+            select your course
+          </p>
+          <div class="flex mb-10 justify-between">
+            <button
+              id="design"
+              class="px-5 border-r-8 border-[#037DF5] py-2 outline-none font-semibold rounded-md bg-gradient-to-t from-[#037DF5] to-[#0FEEBF] for text-center text-white text-lg"
+            >
+              Web Design
+              <p>$<span id="design-fee">3000</span></p>
+            </button>
+            <button
+              id="development"
+              class="px-5 border-r-8 border-[#037DF5] py-2 outline-none font-semibold rounded-md bg-gradient-to-t from-[#037DF5] to-[#0FEEBF] for text-center text-white text-lg"
+            >
+              Web Development
+              <p>$<span id="development-fee">5000</span></p>
+            </button>
+          </div>
+          <button
+            class="px-8 py-4 outline-none font-semibold rounded-lg bg-gradient-to-t from-[#037DF5] to-[#0FEEBF] for text-center text-white text-3xl"
+          >
+            $<span id="total-fee"> Total Fee</span>
+          </button>
+          <p class="text-red-800 capitalize text-md italic mt-10 mb-8">
+            use discount code "DOM" for 30% off
+          </p>
+          <input
+            id="cupon"
+            class="border-b-2 border-zinc-800 w-8/12 text-center text-md py-1 outline-none"
+            type="text"
+            placeholder="Please type discount code"
+          />
+          <button
+            id="apply"
+            class="px-5 py-1 outline-none rounded-lg bg-gradient-to-b from-[#037DF5] to-[#0FEEBF] for text-center font-semibold text-red-800 text-lg"
+          >
+            Apply
+          </button>
+
+          <div
+            class="border border-[#037DF5] rounded-md mt-10 flex justify-between"
+          >
+            <div class="">
+              <span class="border-r border-[#037DF5] float-left p-3"> ⭐</span>
+              <span class="py-2 ml-3 text-xl inline-block font-semibold"
+                >$<span id="discount-fee"> Total Fee</span></span
+              >
+            </div>
+            <button
+              id="registration"
+              class="px-5 float-right py-2 outline-none font-semibold bg-gradient-to-t from-[#037DF5] to-[#0FEEBF] for text-center text-white text-xl"
+            >
+              Register
+            </button>
+          </div>
+          <p id="msg" class="mt-4 absolute text-slate-700 text-md"></p>
+        </div>
+        <div>
+          <img src="./images/study.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/coursefee.js"></script>
+    <script src="./js/discount.js"></script>
+  </body>
+</html>
